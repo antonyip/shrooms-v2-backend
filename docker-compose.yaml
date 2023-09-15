@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  shrooms-v2-backend:
+    container_name: shrooms-v2-backend
+    image: shrooms-v2-backend:latest
+    restart: unless-stopped
+    ports:
+      - 3003:3000
