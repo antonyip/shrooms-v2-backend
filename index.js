@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT | 3000
 const { defaultEndpoint } = require('./defaultEndpoint')
 const { sendQueryWeb } = require('./sendQuery')
+const { cancelQueryWeb } = require('./cancelQuery')
 const { getTokenWeb } = require('./getToken')
 const { getQueryStatusWeb } = require('./getQueryStatus')
 const { getQueryResultsWeb } = require('./getQueryResults')
@@ -15,6 +16,7 @@ global.uuidToUser = {}
 const endpoints = [
   ['/', defaultEndpoint],
   ['/sendQuery', sendQueryWeb],
+  ['/cancelQuery', cancelQueryWeb],
   ['/getToken', getTokenWeb],
   ['/getQueryStatus', getQueryStatusWeb],
   ['/getQueryResults', getQueryResultsWeb],

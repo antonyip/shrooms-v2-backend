@@ -1,7 +1,7 @@
 var crypto = require('crypto')
 var axios = require('axios')
 
-async function _sendQueryWeb(req,res) {
+async function _getTokenWeb(req,res) {
 
 if (!req.body) {
   res.send({"ERROR":"Invalid Body"})
@@ -48,4 +48,4 @@ axios.request(options).then(function (response) {
 
 }
 
-exports.getTokenWeb = _sendQueryWeb
+exports.getTokenWeb = _getTokenWeb
