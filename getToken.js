@@ -23,7 +23,7 @@ var options = {
   url: 'https://nocodb.oracle.antonyip.com/api/v1/db/data/noco/prtquin5mgo4oz9/users/views/users',
   params: {offset: '0', limit: '25', where: ''},
   headers: {
-    'xc-auth': process.env.NOCODB_API_KEY
+    'xc-token': process.env.NOCODB_API_KEY
   }
 };
 
